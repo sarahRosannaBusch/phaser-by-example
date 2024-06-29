@@ -59,9 +59,11 @@ This is done using the Phaser `time.delayedCall` function.
 }
 
 /*
-This is a game object that represents a cloud. It's a simple rectangle with a random size and position. We use a tween to move it from right to left, and then destroy it when it's out of the screen.
+This is a game object that represents a cloud. It's a simple rectangle with a 
+random size and position. We use a tween to move it from right to left, and then 
+destroy it when it's out of the screen.
 */
-class Cloud extends Phaser.GameObjects.Rectangle {
+class Cloud extends Phaser.GameObjects.Ellipse {
   constructor(scene, x, y) {
     const finalY = y || Phaser.Math.Between(0, 100);
     super(scene, x, finalY, 98, 32, 0xffffff);
